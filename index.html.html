@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWICE Candy Pop Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Game Container -->
+  <div class="game-card">
+    
+    <!-- Title / Header -->
+    <div class="header">
+      <div class="tw-logo">TWICE</div>
+      <h1>CANDY POP</h1>
+      <p class="subtitle">Ketuk gula-gula mengikut irama lagu! 🍭✨</p>
+    </div>
+
+    <!-- Top Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-box">
+        <span class="stat-label">MARKAH</span>
+        <span id="score" class="stat-value">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">MASA</span>
+        <span id="timer" class="stat-value">30s</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">COMBO</span>
+        <span id="combo" class="stat-value">x0</span>
+      </div>
+    </div>
+
+    <!-- Game Area -->
+    <div id="game-zone" class="game-zone">
+      
+      <!-- Start Overlay -->
+      <div id="start-overlay" class="overlay active">
+        <div class="candy-icon">🍭</div>
+        <h2>Bersedia untuk Pop?</h2>
+        <p>Gunakan tetikus atau sentuh gula-gula yang muncul sebelum hilang!</p>
+        <button id="start-btn" class="btn">MULA MAIN 🎵</button>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="game-over-overlay" class="overlay">
+        <div class="candy-icon">🎉</div>
+        <h2>Masa Tamat!</h2>
+        <div class="final-score-box">
+          <p>Markah Akhir Anda:</p>
+          <div id="final-score" class="big-score">0</div>
+        </div>
+        <button id="restart-btn" class="btn">MAIN LAGI 🔄</button>
+      </div>
+
+    </div>
+
+    <!-- Music Control Bar -->
+    <div class="audio-control">
+      <button id="music-btn" class="music-toggle-btn">
+        <span id="music-icon">🎵</span> <span id="music-text">Candy Pop Synth Synth: OFF</span>
+      </button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
